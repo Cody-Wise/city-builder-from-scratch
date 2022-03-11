@@ -2,11 +2,11 @@
 body {
     
     
-    --color1: white;
+    /* --color1: white;
     --color2: white;
     --color3: white;
     --color4: white;
-    --color5: white;
+    --color5: white; */
     
     /* https://coolors.co/generate and click export -> scss to get the colors to copy and paste below*/
         
@@ -30,6 +30,10 @@ body {
     font-family: 'Titillium Web', sans-serif;
     background-color: var(--color2);
 }
+
+/* #wrapper{
+    
+} */
 
 .main-section{
     display: grid;

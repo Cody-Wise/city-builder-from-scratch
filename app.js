@@ -13,10 +13,10 @@ const welcomeTextInput = document.getElementById('welcome-input');
 const welcomeDisplay = document.getElementById('welcome-display');
 const nightModeEl = document.getElementById('night-mode');
 const dayModeEl = document.getElementById('day-mode');
-const radioButtonsEl = document.getElementById('radio-buttons');
 const welcomeInputEl = document.getElementById('welcome-input');
 const nightModeInputEl = document.getElementById('night-mode');
 const dayModeInputEl = document.getElementById('day-mode');
+const wrapperEl = document.getElementById('wrapper');
 
 
 
@@ -37,6 +37,9 @@ dayModeInputEl.addEventListener('click', () => {
     skylineImageEl.src = './assets/skyline-day-1.jpg';
     natureImageEl.src = './assets/nature-day-1.jpg';
 
+    wrapperEl.style.backgroundColor = 'white';
+    wrapperEl.style.color = 'black';
+
 });
 
 nightModeInputEl.addEventListener('click', () => {
@@ -45,6 +48,9 @@ nightModeInputEl.addEventListener('click', () => {
     waterFrontImageEl.src = './assets/waterfront-night-1.jpg'; 
     skylineImageEl.src = './assets/skyline-night-1.jpg';
     natureImageEl.src = './assets/nature-night-1.jpg';
+
+    wrapperEl.style.backgroundColor = 'black';
+    wrapperEl.style.color = 'white';
     
 });
 
