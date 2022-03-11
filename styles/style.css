@@ -31,14 +31,6 @@ body {
     background-color: var(--color2);
 }
 
-main {
-    /* display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: calc(var(--footer-height)); */
-}
-
 .main-section{
     display: grid;
     width:100%;
