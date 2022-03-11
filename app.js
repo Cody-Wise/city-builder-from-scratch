@@ -11,18 +11,50 @@ const reportEl = document.getElementById('report');
 const sloganListEl = document.getElementById('slogan-list');
 const welcomeTextInput = document.getElementById('welcome-input');
 const welcomeDisplay = document.getElementById('welcome-display');
+const nightModeEl = document.getElementById('night-mode');
+const dayModeEl = document.getElementById('day-mode');
+const radioButtonsEl = document.getElementById('radio-buttons');
+const welcomeInputEl = document.getElementById('welcome-input');
+const nightModeInputEl = document.getElementById('night-mode');
+const dayModeInputEl = document.getElementById('day-mode');
+
+
 
 // let state
 
 let waterfrontCount = 0;
 let skylineCount = 0;
 let natureCount = 0;
+let modes = [dayModeEl, nightModeEl];
 
 const slogans = []; 
 
-// set event listeners 
+dayModeInputEl.addEventListener('click', () => {
 
-document.addEventListener('input', () => {
+
+  
+    waterFrontImageEl.src = './assets/waterfront-day-1.jpg'; 
+    skylineImageEl.src = './assets/skyline-day-1.jpg';
+    natureImageEl.src = './assets/nature-day-1.jpg';
+
+});
+
+nightModeInputEl.addEventListener('click', () => {
+    
+      
+    waterFrontImageEl.src = './assets/waterfront-night-1.jpg'; 
+    skylineImageEl.src = './assets/skyline-night-1.jpg';
+    natureImageEl.src = './assets/nature-night-1.jpg';
+    
+});
+
+  
+
+
+
+
+
+welcomeInputEl.addEventListener('input', () => {
 
     const welcomeValue = welcomeTextInput.value;
 
@@ -30,12 +62,23 @@ document.addEventListener('input', () => {
     
 });
 
-
 waterFrontDropdownEl.addEventListener('change', () => {
 
     const value = waterFrontDropdownEl.value;
 
-    waterFrontImageEl.src = `./assets/waterfront-${value}.jpg`;
+    if (nightModeEl.checked){
+
+        waterFrontImageEl.src = `./assets/waterfront-night-${value}.jpg`;
+
+    }
+
+    else {
+
+        if (dayModeEl.checked)
+            waterFrontImageEl.src = `./assets/waterfront-day-${value}.jpg`;
+
+        
+    }
 
     waterfrontCount++;
 
@@ -47,9 +90,20 @@ skylineDropdownEl.addEventListener('change', () => {
 
     const value = skylineDropdownEl.value;
 
-    skylineImageEl.src = `./assets/skyline-${value}.jpg`;
 
+    if (nightModeEl.checked){
 
+        skylineImageEl.src = `./assets/skyline-night-${value}.jpg`;
+
+    }
+
+    else {
+
+        if (dayModeEl.checked)
+            skylineImageEl.src = `./assets/skyline-day-${value}.jpg`;
+
+        
+    }
 
     skylineCount++;
 
@@ -61,7 +115,20 @@ natureDropdownEl.addEventListener('change', () => {
 
     const value = natureDropdownEl.value;
 
-    natureImageEl.src = `./assets/nature-${value}.jpg`;
+
+    if (nightModeEl.checked){
+
+        natureImageEl.src = `./assets/nature-night-${value}.jpg`;
+
+    }
+
+    else {
+
+        if (dayModeEl.checked)
+            natureImageEl.src = `./assets/nature-day-${value}.jpg`;
+
+        
+    }
 
 
     natureCount++;
@@ -75,6 +142,7 @@ sloganButton.addEventListener('click', () => {
     const newSlogan = sloganInputEl.value;
 
     slogans.push(newSlogan);
+
 
     displaySlogans();
 
