@@ -25,7 +25,7 @@ const wrapperEl = document.getElementById('wrapper');
 let waterfrontCount = 0;
 let skylineCount = 0;
 let natureCount = 0;
-let modes = [dayModeEl, nightModeEl];
+// let modes = [dayModeEl, nightModeEl];
 
 const slogans = []; 
 
@@ -176,6 +176,30 @@ function displaySlogans(){
     }
 }
 
+const waterFrontArray = [{ display: 'Waterfront 1', value: '1' }, { display: 'Waterfront 2', value: '2' }, { display: 'Waterfront 3', value: '3' }];
+const skylineArray = [{ display: 'Skyline 1', value: '1' }, { display: 'Skyline 2', value: '2' }, { display: 'Skyline 3', value: '3' }];
+const natureArray = [{ display: 'Nature 1', value: '1' }, { display: 'Nature 2', value: '2' }, { display: 'Nature 3', value: '3' }];
+
+for (let waterfront of waterFrontArray) {
+    const option = document.createElement('option');
+    waterFrontDropdownEl.append(option);
+    option.textContent = waterfront.display;
+    option.value = waterfront.value;
+}
+
+for (let skyline of skylineArray) {
+    const option = document.createElement('option');
+    skylineDropdownEl.append(option);
+    option.textContent = skyline.display;
+    option.value = skyline.value;
+}
+
+for (let nature of natureArray) {
+    const option = document.createElement('option');
+    natureDropdownEl.append(option);
+    option.textContent = nature.display;
+    option.value = nature.value;
+}
 
 
 
