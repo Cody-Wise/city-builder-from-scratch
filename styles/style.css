@@ -129,6 +129,12 @@ footer {
     overflow: auto;
 }
 
+.right div, label {
+
+    margin-top:10px;
+    
+}
+
 img{
     height: 250px;
     width: 250px;
@@ -140,7 +146,7 @@ img{
 
 #slogan{
     display: grid;
-    grid-template-rows: 0.25fr 0.25fr 0.5fr 0.5fr;
+    grid-template-rows: 0.25fr 0.25fr 0.25fr 0.25fr;
 }
 
 #stats {

@@ -17,7 +17,9 @@ const welcomeInputEl = document.getElementById('welcome-input');
 const nightModeInputEl = document.getElementById('night-mode');
 const dayModeInputEl = document.getElementById('day-mode');
 const wrapperEl = document.getElementById('wrapper');
-
+const audioDropdownEl = document.getElementById('audio-dropdown');
+const audioEl = document.getElementById('audio');
+const testFormEl = document.getElementById('test-form');
 
 
 // let state
@@ -55,6 +57,18 @@ nightModeInputEl.addEventListener('click', () => {
 });
 
   
+audioDropdownEl.addEventListener('change', () => {
+
+    console.log('help');
+
+    const value = audioDropdownEl.value;
+
+    audioEl.src = `./assets/sound-${value}.mp3`;
+
+    audioEl.play();
+    
+});
+
 
 
 
@@ -168,10 +182,19 @@ function displaySlogans(){
     sloganListEl.textContent = '';
 
     for (let slogan of slogans){
+        const cityName = welcomeTextInput.value;
         const p = document.createElement('p');
+        
         p.classList.add('slogans');
-        p.textContent = slogan;
-        sloganListEl.append(p);
+        if (cityName === ''){
+            p.textContent = `${slogan}`; 
+            sloganListEl.append(p);
+        }
+
+        else {p.textContent = `${cityName}: ${slogan}`;
+            sloganListEl.append(p);
+
+        }
 
     }
 }
