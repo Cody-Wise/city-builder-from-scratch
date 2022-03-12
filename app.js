@@ -5,8 +5,8 @@ const natureImageEl = document.getElementById('nature-image');
 const waterFrontDropdownEl = document.getElementById('waterfront-dropdown');
 const skylineDropdownEl = document.getElementById('skyline-dropdown');
 const natureDropdownEl = document.getElementById('nature-dropdown');
-const sloganInputEl = document.getElementById('slogan-input');
-const sloganButton = document.getElementById('slogan-button');
+// const sloganInputEl = document.getElementById('slogan-input');
+// const sloganButton = document.getElementById('slogan-button');
 const reportEl = document.getElementById('report');
 const sloganListEl = document.getElementById('slogan-list');
 const welcomeTextInput = document.getElementById('welcome-input');
@@ -19,6 +19,7 @@ const dayModeInputEl = document.getElementById('day-mode');
 const wrapperEl = document.getElementById('wrapper');
 const audioDropdownEl = document.getElementById('audio-dropdown');
 const audioEl = document.getElementById('audio');
+const testFormEl = document.getElementById('test-form');
 
 
 // let state
@@ -29,6 +30,35 @@ let natureCount = 0;
 // let modes = [dayModeEl, nightModeEl];
 
 const slogans = []; 
+
+
+
+
+testFormEl.addEventListener('submit', (e) => {
+  // on form submission, prevent default
+    e.preventDefault();
+
+  // construct a FormData object, which fires the formdata event
+    new FormData(testFormEl);
+});
+
+// formdata handler to retrieve data
+
+testFormEl.addEventListener('formdata', (e) => {
+
+
+  // Get the form data from the event object
+    let data = e.formData;
+    for (const value of data.values()) {
+       
+        slogans.push(value);
+        
+    }
+
+    displaySlogans();
+
+ 
+});
 
 dayModeInputEl.addEventListener('click', () => {
 
@@ -156,20 +186,20 @@ natureDropdownEl.addEventListener('change', () => {
   
 });
 
-sloganButton.addEventListener('click', () => {
+// sloganButton.addEventListener('click', () => {
 
-    const newSlogan = sloganInputEl.value;
+//     const newSlogan = sloganInputEl.value;
 
-    slogans.push(newSlogan);
+//     slogans.push(newSlogan);
 
 
-    displaySlogans();
+//     displaySlogans();
 
    
 
     
-    sloganInputEl.value = '';
-});
+//     sloganInputEl.value = '';
+// });
 
 function displayCountStats(){
 
