@@ -19,7 +19,6 @@ const dayModeInputEl = document.getElementById('day-mode');
 const wrapperEl = document.getElementById('wrapper');
 const audioDropdownEl = document.getElementById('audio-dropdown');
 const audioEl = document.getElementById('audio');
-const testFormEl = document.getElementById('test-form');
 
 
 // let state
@@ -59,7 +58,7 @@ nightModeInputEl.addEventListener('click', () => {
   
 audioDropdownEl.addEventListener('change', () => {
 
-    console.log('help');
+
 
     const value = audioDropdownEl.value;
 
