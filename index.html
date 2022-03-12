@@ -18,48 +18,105 @@
             <img src="./assets/big-logo.png" />
         </div>
     </header>
-    <main>
-        <section class="main-section">
-            <img class="main-logo" src="./assets/alchemy-logo.png" />
-            <h2>
-                Welcome to Alchemy Bootstrap!
+    <main id="wrapper">
+        <h2>
+                City Builder
             </h2>
+        <section class="main-section">
+            
 
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
-            <hr />
-            <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam repellendus similique consectetur
-                voluptas facilis molestiae voluptates nobis error sapiente, ad, ipsa vero non, sint eligendi? Eos
-                praesentium iusto magnam exercitationem.
-                Earum sunt voluptatibus molestias, sint voluptatum quos reiciendis. Id asperiores deleniti dolores
-                provident, eius, nostrum aperiam vel, optio qui illo corrupti in. Eum quam, est nemo porro sapiente
-                excepturi assumenda.
-                Rerum unde quidem maxime. Ullam, dolores labore molestias voluptatibus adipisci quod? Quaerat nihil
-                inventore molestiae assumenda, voluptates vel necessitatibus eligendi? Accusamus ratione eligendi
-                reprehenderit? Beatae incidunt molestias ea soluta nulla.
-                Fugiat quae soluta voluptate mollitia praesentium modi ex illo, autem assumenda, vel aliquam fugit
-                possimus dolorem esse corporis ipsa! Voluptatem sapiente error non, ea optio suscipit quasi maxime nobis
-                ex?
-                Et ipsa tenetur ullam ab nesciunt quas fugit velit impedit illum esse eligendi corporis culpa
-                praesentium aspernatur ex sint veniam quidem, doloribus corrupti hic vitae. Eum neque ducimus omnis
-                exercitationem?
-            </p>
+            <div class="left">
+<div id="waterfront-container">
+    <img src="./assets/waterfront-day-1.jpg" id="waterfront-image">
+</div>
+
+<div id="skyline-container">
+<img src="./assets/skyline-day-1.jpg" id="skyline-image">
+</div>
+
+<div id="nature-conatiner">
+    <img src="./assets/nature-day-1.jpg" id="nature-image">
+</div>
+
+            </div>
+
+
+            <div class ="right">
+                <div>
+                    <input type="radio" id="day-mode" name="radio" value="day-mode" checked>
+                    <label for="daymode">Day Mode</label>
+                  </div>
+               
+                  <div>
+                    
+                    <input type="radio" id="night-mode" name="radio" value="night-mode">
+                    <label for="nightmode">Night Mode</label>
+                  </div>
+                  <label>Select Audio File
+                    <select id="audio-dropdown">
+                        <option value="1">Select Option</option>
+                        <option value="2">Birds</option>
+                        <option value="3">Storm</option>
+                        </select>
+    <br></label>
+                  
+                  
+                
+
+<label>Waterfront
+                <select id="waterfront-dropdown">
+                    <!-- <option value="1">Waterfront 1</option>
+                    <option value="2">Waterfront 2</option>
+                    <option value="3">Waterfront 3</option> -->
+                    </select>
+<br></label>
+<label>Skyline
+                    <select id="skyline-dropdown">
+                        <!-- <option value="1">Skyline 1</option>
+                        <option value="2">Skyline 2</option>
+                        <option value="3">Skyline 3</option> -->
+                        </select>
+<br></label>
+<label>Nature
+                        <select id="nature-dropdown">
+                            <!-- <option value="1">Nature 1</option>
+                            <option value="2">Nature 2</option>
+                            <option value="3">Nature 3</option> -->
+                            </select>
+</label>
+
+<div id="welcome-text">
+    Add a City Name
+            <input id="welcome-input" />
+            <h2 id="welcome-display">Welcome to: </h2> 
+</div>
+            </div>
+
+    <div id="slogan">   <label>
+            Add a city slogan
+            <form id="test-form">
+            <input type="text" name="slogans" id="slogan-input" />
+            <!-- <button id="slogan-button">Add</button> -->
+            <input type="submit" value="Submit"></form>
+        </label>
+
+
+<div id="stats">
+    <h3>List of Slogans</h3>
+    <div id="slogan-list"></div>
+    <div>
+        <h3>Stats</h3>
+    <p id="report"></p>
+    </div>
+    </div>
+</div>
+ 
+<audio id= "audio" src=""></audio>
+
+</div>
+
+
+       
 
         </section>
     </main>
