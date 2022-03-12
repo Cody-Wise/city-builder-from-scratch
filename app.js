@@ -5,9 +5,8 @@ const natureImageEl = document.getElementById('nature-image');
 const waterFrontDropdownEl = document.getElementById('waterfront-dropdown');
 const skylineDropdownEl = document.getElementById('skyline-dropdown');
 const natureDropdownEl = document.getElementById('nature-dropdown');
-// const sloganInputEl = document.getElementById('slogan-input');
-// const sloganButton = document.getElementById('slogan-button');
 const reportEl = document.getElementById('report');
+const sloganInputEl = document.getElementById('slogan-input');
 const sloganListEl = document.getElementById('slogan-list');
 const welcomeTextInput = document.getElementById('welcome-input');
 const welcomeDisplay = document.getElementById('welcome-display');
@@ -27,7 +26,6 @@ const testFormEl = document.getElementById('test-form');
 let waterfrontCount = 0;
 let skylineCount = 0;
 let natureCount = 0;
-// let modes = [dayModeEl, nightModeEl];
 
 const slogans = []; 
 
@@ -35,19 +33,19 @@ const slogans = [];
 
 
 testFormEl.addEventListener('submit', (e) => {
-  // on form submission, prevent default
+ 
     e.preventDefault();
 
-  // construct a FormData object, which fires the formdata event
+  
     new FormData(testFormEl);
 });
 
-// formdata handler to retrieve data
+
 
 testFormEl.addEventListener('formdata', (e) => {
 
 
-  // Get the form data from the event object
+ 
     let data = e.formData;
     for (const value of data.values()) {
        
@@ -56,7 +54,7 @@ testFormEl.addEventListener('formdata', (e) => {
     }
 
     displaySlogans();
-
+    sloganInputEl.value = '';
  
 });
 
